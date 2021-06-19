@@ -2,7 +2,7 @@
 // -------------------------------------------------------------------
     // Include Gulp
 var gulp                    = require("gulp"),
-
+ ghPages = require('gulp-gh-pages'),
     // HTML plugins
     fileinclude             = require("gulp-file-include"),
     htmlmin                 = require("gulp-htmlmin"),
@@ -114,9 +114,9 @@ gulp.task("images", function() {
         .pipe(gulp.dest("dist/img"));
 });
 
-gulp.task('deploy', function () {
-    return gulp.src("./dist/**/*")
-      .pipe(deploy())
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+      .pipe(ghPages());
   });
   
 // Use default task to launch BrowserSync and watch all files
