@@ -1,29 +1,4 @@
-<!doctype html>
-<html lang="en-us">
-
-    <head>
-
-        <!-- Meta -->
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-
-        <title>Carta</title>
-        <meta name="description" content="">
-
-        <!-- The compiled CSS file -->
-        <link rel="stylesheet" href="css/production.css">
-
-        <!-- Web fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700|Source+Serif+Pro:700" rel="stylesheet"> 
-
-        <!-- favicon.ico. Place these in the root directory. -->
-        <link rel="shortcut icon" href="favicon.ico">
-
-    </head>
-
-    <body class="has-animations">
-
+@@include("partials/head.html")
 
         <div class="container pt3 pb3">
 
@@ -73,12 +48,12 @@
         <section class="pb4">
             <h2 class="text--gray pb1 border--bottom">Forms</h2>
             <form class="form">
-                <input class="form-control mb1" placeholder="Name">
+                <input class="form-control mb1" type="text" placeholder="Name">
                 <input class="form-control mb1" type="email" placeholder="Email Address">
                 <input class="form-control mb1" type="subject" placeholder="Subject">
                 <div class="select mb1">
                     <select>
-                        <option selected="selected">Open this select</option>
+                        <option selected>Open this select</option>
                         <option>One</option>
                         <option>Two</option>
                         <option>Three</option>
@@ -99,12 +74,4 @@
 
         </div> <!-- End container -->
 
-    <!-- Scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
-    <!-- The compiled JavaScript file -->
-    <script src="js/production.js"></script>
-
-    </body>
-</html>
-
+@@include("partials/foot.html")
