@@ -114,6 +114,11 @@ gulp.task("images", function() {
         .pipe(gulp.dest("dist/img"));
 });
 
+gulp.task('deploy', function () {
+    return gulp.src("./dist/**/*")
+      .pipe(deploy())
+  });
+  
 // Use default task to launch BrowserSync and watch all files
 gulp.task("default", ["browser-sync"], function () {
     // All browsers reload after tasks are complete
